@@ -38,4 +38,29 @@ An SAP Fiori application using northwing odata service.
 
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
+<br>
 
+Were using UI5 Demo kit to generate the List Item. here's the code:
+```
+<List id="_IDGenList1"
+		items="{/Customers}"
+		headerText="Customers Details">
+		    <ObjectListItem id="_IDGenObjectListItem"
+			title="{CustomerID}"
+			type="Active"
+			press=".onListItemPress"
+			number="{Phone}"
+			numberUnit="{Fax}">
+			<!-- <firstStatus>
+				<ObjectStatus
+					text="{Status}"
+					state="{
+						path: 'Status',
+						formatter: '.formatter.status'
+					}" />
+			</firstStatus> -->
+			<ObjectAttribute id="_IDGenObjectAttribute" text="{CompanyName} {ContactName}" />
+			<ObjectAttribute id="_IDGenObjectAttribute1" text="{Address}, {City}, {PostalCode}, {Country}" />
+		    </ObjectListItem>
+	    </List>
+```
