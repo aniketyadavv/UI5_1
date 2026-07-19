@@ -1,0 +1,29 @@
+<mvc:View controllerName="com.sap.zproject1.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <content>
+    	<List id="_IDGenList1"
+		items="{/Customers}"
+		headerText="Customers Details">
+		<ObjectListItem id="_IDGenObjectListItem"
+			title="{CustomerID}"
+			type="Active"
+			press=".onListItemPress"
+			number="{Phone}"
+			numberUnit="{Fax}">
+			<!-- <firstStatus>
+				<ObjectStatus
+					text="{Status}"
+					state="{
+						path: 'Status',
+						formatter: '.formatter.status'
+					}" />
+			</firstStatus> -->
+			<ObjectAttribute id="_IDGenObjectAttribute" text="{CompanyName} {ContactName}" />
+			<ObjectAttribute id="_IDGenObjectAttribute1" text="{Address}, {City}, {PostalCode}, {Country}" />
+		</ObjectListItem>
+	</List>
+    </content>
+    </Page>
+</mvc:View>
