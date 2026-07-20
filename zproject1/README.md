@@ -64,3 +64,7 @@ Were using UI5 Demo kit to generate the List Item. here's the code:
 		    </ObjectListItem>
 	    </List>
 ```
+
+UI5 control through Layout editor.
+<img width="1836" height="872" alt="image" src="https://github.com/user-attachments/assets/d1158f8e-511c-41ef-9a03-b9b19c5a3bc1" />
+
