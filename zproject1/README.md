@@ -41,6 +41,7 @@ An SAP Fiori application using northwing odata service.
 <br>
 
 Were using UI5 Demo kit to generate the List Item. here's the code:
+
 ```
 <List id="_IDGenList1"
 		items="{/Customers}"
@@ -64,7 +65,8 @@ Were using UI5 Demo kit to generate the List Item. here's the code:
 		    </ObjectListItem>
 	    </List>
 ```
-
-UI5 control through Layout editor.
+above was using test editor and this is 
+UI5 control through Layout editor. (drag nd drop to create layout, and bind it like adobe form with the services and code will automatically generate or we can write our own)
 <img width="1836" height="872" alt="image" src="https://github.com/user-attachments/assets/d1158f8e-511c-41ef-9a03-b9b19c5a3bc1" />
+<img width="1536" height="685" alt="image" src="https://github.com/user-attachments/assets/8910cd33-35ee-4d59-9b03-f6309582d52c" />
 
