@@ -1,17 +1,48 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.zproject1.controller.Home">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" controllerName="com.sap.zproject1.controller.Home">
     <Page id="page" title="{i18n>title}">
     <content>
-    	
-    <List noDataText="Drop list items here" id="list0" items="{/Customers}">
-    	
-        <items>
-    	
-            <StandardListItem type="Navigation" title="{CompanyName}" description="{ContactName}, {ContactTitle}" icon="sap-icon://customer-and-contacts" id="item0"/>
-    	
-        </items>
-    	
-    </List>
-    	
+    <f:SimpleForm id="SimpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false"
+			ariaLabelledBy="Title1" >
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<Title id="Title1" text="{i18n>SimpleForm}"/>
+					<ToolbarSpacer id="_IDGenToolbarSpacer" />
+					<Button id="_IDGenButton" text="{i18n>Edit}" type="Emphasized" icon="sap-icon://edit"/>
+                    <Button id="_IDGenButton1" text="{i18n>Save}" type="Accept" icon="sap-icon://save"/>
+				</Toolbar>   
+			</f:toolbar>
+			<f:content>
+				<Label id="_IDGenLabel" text="Company Name" />
+				<Input id="_IDGenInput" placeholder="Enter Company Number" value="{}"/>
+				<Label id="_IDGenLabel1" text="Contact Person Name" />
+				<Input id="_IDGenInput1" value="{}"/>
+                <Label id="_IDGenLabel2" text="Customer ID" />
+				<Input id="_IDGenInput2" maxLength="5" type="Number" value="{}"/>
+                <Label id="_IDGenLabel4" text="Contact person Designation" />
+                <ComboBox id="_IDGenComboBox1"
+				    items="{/Customers}">
+				    <core:Item id="_IDGenItem" key="{CustomerID}" text="{ContactTitle}" />
+                    <!-- This is using Odata --   
+                    <!-- <core:Item id="_IDGenItem1" key="O" text="Owner" />
+                    <core:Item id="_IDGenItem2" key="A" text="Order Admin" />  that is hard coded way --> 
+			</ComboBox>
+			</f:content>
+		</f:SimpleForm>
     </content>
     </Page>
 </mvc:View>
